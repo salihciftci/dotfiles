@@ -24,3 +24,4 @@ source $ZSH/oh-my-zsh.sh
 alias tmux='TERMINFO=/usr/share/terminfo/x/xterm-16color TERM=xterm-16color tmux -2'
 alias ct="cd ~/Development/Tina"
 alias cdd="cd ~/Development"
+alias py3="python3"
