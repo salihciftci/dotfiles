@@ -25,3 +25,6 @@ alias tmux='TERMINFO=/usr/share/terminfo/x/xterm-16color TERM=xterm-16color tmux
 alias ct="cd ~/code/tina"
 alias cc="cd ~/code"
 alias py3="python3"
+alias gob="go build"
+alias goi="go install"
+alias got="go test"
