@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/salih/.oh-my-zsh
+export ZSH=/Users/salih/.oh-my-zsh
 
 # Theme
 ZSH_THEME="robbyrussell"
@@ -22,6 +22,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Aliases
 alias tmux='TERMINFO=/usr/share/terminfo/x/xterm-16color TERM=xterm-16color tmux -2'
-alias ct="cd ~/Development/Tina"
-alias cdd="cd ~/Development"
+alias ct="cd ~/code/tina"
+alias cc="cd ~/code"
 alias py3="python3"

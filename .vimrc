@@ -6,6 +6,7 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 syntax enable
+
 "-------------------------------------------------------------------------------
 " Key Mapping
 "-------------------------------------------------------------------------------
@@ -15,15 +16,12 @@ map <Leader>n :NERDTreeToggle<CR>
 
 set timeoutlen=1000 ttimeoutlen=0 
 set rtp+=~/.vim/bundle/Vundle.vim
-"nohl
-"
-
 
 "-------------------------------------------------------------------------------
 " Plugins
 "-------------------------------------------------------------------------------
 
-call vundle#begin()	"required
+call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
@@ -31,15 +29,15 @@ Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'drewtempelmeyer/palenight.vim'
 Plugin 'hdima/python-syntax'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'elzr/vim-json'
-Plugin 'altercation/vim-colors-solarized'
+Plugin 'squarefrog/tomorrow-night.vim'
+Plugin 'fatih/vim-go'
 
-call vundle#end()            " required
-filetype plugin indent on    " required
+call vundle#end()          
+filetype plugin indent on    
 
 "-------------------------------------------------------------------------------
 " Interface
@@ -54,10 +52,10 @@ set sidescrolloff=10  " Leave 10 characters of horizontal buffer when scrolling
 "-------------------------------------------------------------------------------
 
 set background=dark
-colorscheme solarized
+colorscheme tomorrow-night
 set t_Co=16
 " Showcase comments in italics
-highlight Comment cterm=italic gui=italic
+"highlight Comment cterm=italic gui=italic
 
 "Learning Vim - Disable Arrow Keys
 nnoremap <Left> :echoe "Use h"<CR>
