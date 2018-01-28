@@ -53,6 +53,7 @@ set sidescrolloff=10  " Leave 10 characters of horizontal buffer when scrolling
 
 set background=dark
 colorscheme tomorrow-night
+let g:airline_theme='minimalist'
 set t_Co=16
 " Showcase comments in italics
 "highlight Comment cterm=italic gui=italic
