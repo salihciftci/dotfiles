@@ -35,6 +35,7 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'elzr/vim-json'
 Plugin 'squarefrog/tomorrow-night.vim'
 Plugin 'fatih/vim-go'
+Plugin 'https://github.com/joukevandermaas/vim-ember-hbs.git'
 
 call vundle#end()          
 filetype plugin indent on    
