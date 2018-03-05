@@ -4,10 +4,6 @@ export ZSH=/Users/salih/.oh-my-zsh
 # Theme
 ZSH_THEME="robbyrussell"
 
-# Jump // https://github.com/gsamokovarov/jump
-#
-eval "$(jump shell)"
-# 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
