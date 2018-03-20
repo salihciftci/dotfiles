@@ -23,6 +23,3 @@ alias python="/Library/Frameworks/Python.framework/Versions/3.6/bin/python3"
 alias pip="python -m pip"
 
 alias tmux='TERMINFO=/usr/share/terminfo/x/xterm-16color TERM=xterm-16color tmux -2'
-
-alias quit="exit"
-alias td="~/code/td/build/td"

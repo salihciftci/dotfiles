@@ -36,9 +36,15 @@ Plugin 'elzr/vim-json'
 Plugin 'squarefrog/tomorrow-night.vim'
 Plugin 'fatih/vim-go'
 Plugin 'https://github.com/joukevandermaas/vim-ember-hbs.git'
+Plugin 'SirVer/ultisnips'
 
 call vundle#end()          
-filetype plugin indent on    
+filetype plugin indent on   
+
+"--
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 "-------------------------------------------------------------------------------
 " Interface
