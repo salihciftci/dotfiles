@@ -3,20 +3,21 @@
 " @salihciftci
 "-------------------------------------------------------------------------------
 
-set nocompatible              " be iMproved, required
-filetype off                  " required
-syntax enable
+set nocompatible
+filetype off
 
 "-------------------------------------------------------------------------------
 " Plugins
 "-------------------------------------------------------------------------------
+
 set timeoutlen=1000 ttimeoutlen=0 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'SirVer/ultisnips'
+Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-fugitive'
+Plugin 'SirVer/ultisnips'
 Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'bling/vim-airline'
@@ -27,22 +28,40 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'elzr/vim-json'
 Plugin 'squarefrog/tomorrow-night.vim'
 Plugin 'fatih/vim-go'
-Plugin 'https://github.com/joukevandermaas/vim-ember-hbs.git'
 Plugin 'fatih/molokai'
 
 call vundle#end()          
 filetype plugin indent on   
 
-""-------------------------------------------------------------------------------
+"-------------------------------------------------------------------------------
 " Key Mapping
 "-------------------------------------------------------------------------------
 
-let mapleader = 'z'
+let mapleader = ','
 map <Leader>n :NERDTreeToggle<CR>
 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+autocmd FileType go nmap <silent> <leader>r <Plug>(go-run)
+autocmd FileType go nmap <silent> <leader>t <Plug>(go-test)
+autocmd FileType go nmap <silent> <leader>b <Plug>(go-build)
+
+map <C-n> :cn<CR>
+map <C-m> :cp<CR>
+nnoremap <leader>a :cclose<CR>
+
+"Learning Vim - Disable Arrow Keys
+nnoremap <Left> :echoe "Use h"<CR>
+noremap! <Left> <Esc>
+nnoremap <Right> :echoe "Use l"<CR>
+noremap! <Right> <Esc>
+nnoremap <Up> :echoe "Use k"<CR>
+noremap! <Up> <Esc>
+nnoremap <Down> :echoe "Use j"<CR>
+noremap! <Down> <Esc>
+
 
 "-------------------------------------------------------------------------------
 " Settings
@@ -57,21 +76,15 @@ set noerrorbells      " No beeps
 set noswapfile        " Don't use swapfile
 set nobackup          " Don't create annoying backup files
 
+syntax enable
 set background=dark
 set t_Co=256
-colorscheme tomorrow-night
+let g:molokai_original = 1
+let g:rehash256 = 1
+colorscheme molokai
 let g:airline_theme='minimalist'
-
-
-"Learning Vim - Disable Arrow Keys
-nnoremap <Left> :echoe "Use h"<CR>
-noremap! <Left> <Esc>
-nnoremap <Right> :echoe "Use l"<CR>
-noremap! <Right> <Esc>
-nnoremap <Up> :echoe "Use k"<CR>
-noremap! <Up> <Esc>
-nnoremap <Down> :echoe "Use j"<CR>
-noremap! <Down> <Esc>
+highlight QuickFixLine cterm=None ctermbg=256 guibg=#ffff00
+highlight clear ErrorMsg
 
 "-------------------------------------------------------------------------------
 " Neovim-specific configurations
