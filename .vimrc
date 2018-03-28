@@ -53,15 +53,16 @@ set scrolloff=5       " Leave 5 lines of buffer when scrolling
 set sidescrolloff=10  " Leave 10 characters of horizontal buffer when scrolling
 set encoding=utf-8    " Set default encoding to UTF-8
 set autoread          " Automatically reread changed files without asking me anything
-set noerrorbells
-set noswapfile               " Don't use swapfile
-set nobackup                 " Don't create annoying backup files
+set noerrorbells      " No beeps
+set noswapfile        " Don't use swapfile
+set nobackup          " Don't create annoying backup files
 
 set background=dark
+set t_Co=256
 colorscheme tomorrow-night
 let g:airline_theme='minimalist'
-set t_Co=256
-let g:molokai_original = 1
+
+
 "Learning Vim - Disable Arrow Keys
 nnoremap <Left> :echoe "Use h"<CR>
 noremap! <Left> <Esc>
