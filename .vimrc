@@ -8,22 +8,14 @@ filetype off                  " required
 syntax enable
 
 "-------------------------------------------------------------------------------
-" Key Mapping
-"-------------------------------------------------------------------------------
-
-let mapleader = 'z'
-map <Leader>n :NERDTreeToggle<CR>
-
-set timeoutlen=1000 ttimeoutlen=0 
-set rtp+=~/.vim/bundle/Vundle.vim
-
-"-------------------------------------------------------------------------------
 " Plugins
 "-------------------------------------------------------------------------------
-
+set timeoutlen=1000 ttimeoutlen=0 
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'SirVer/ultisnips'
 Plugin 'tpope/vim-fugitive'
 Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -36,35 +28,40 @@ Plugin 'elzr/vim-json'
 Plugin 'squarefrog/tomorrow-night.vim'
 Plugin 'fatih/vim-go'
 Plugin 'https://github.com/joukevandermaas/vim-ember-hbs.git'
-Plugin 'SirVer/ultisnips'
+Plugin 'fatih/molokai'
 
 call vundle#end()          
 filetype plugin indent on   
 
-"--
+""-------------------------------------------------------------------------------
+" Key Mapping
+"-------------------------------------------------------------------------------
+
+let mapleader = 'z'
+map <Leader>n :NERDTreeToggle<CR>
+
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 "-------------------------------------------------------------------------------
-" Interface
+" Settings
 "-------------------------------------------------------------------------------
 
 set number            " Enable line numbers
 set scrolloff=5       " Leave 5 lines of buffer when scrolling
 set sidescrolloff=10  " Leave 10 characters of horizontal buffer when scrolling
-
-"-------------------------------------------------------------------------------
-" Colors & Formatting
-"-------------------------------------------------------------------------------
+set encoding=utf-8    " Set default encoding to UTF-8
+set autoread          " Automatically reread changed files without asking me anything
+set noerrorbells
+set noswapfile               " Don't use swapfile
+set nobackup                 " Don't create annoying backup files
 
 set background=dark
 colorscheme tomorrow-night
 let g:airline_theme='minimalist'
-set t_Co=16
-" Showcase comments in italics
-"highlight Comment cterm=italic gui=italic
-
+set t_Co=256
+let g:molokai_original = 1
 "Learning Vim - Disable Arrow Keys
 nnoremap <Left> :echoe "Use h"<CR>
 noremap! <Left> <Esc>
