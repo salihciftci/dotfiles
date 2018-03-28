@@ -28,6 +28,7 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'elzr/vim-json'
 Plugin 'fatih/vim-go'
 Plugin 'fatih/molokai'
+Plugin 'AndrewRadev/splitjoin.vim'
 
 call vundle#end()          
 filetype plugin indent on   
@@ -42,6 +43,11 @@ map <Leader>n :NERDTreeToggle<CR>
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+let g:go_fmt_command = "goimports"
+let g:go_addtags_transform = "camelcase"
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
 
 autocmd FileType go nmap <silent> <leader>r <Plug>(go-run)
 autocmd FileType go nmap <silent> <leader>t <Plug>(go-test)
