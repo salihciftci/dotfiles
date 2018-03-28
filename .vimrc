@@ -26,7 +26,6 @@ Plugin 'hdima/python-syntax'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'elzr/vim-json'
-Plugin 'squarefrog/tomorrow-night.vim'
 Plugin 'fatih/vim-go'
 Plugin 'fatih/molokai'
 
