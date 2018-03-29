@@ -16,9 +16,13 @@ plugins=(
 
 # User configuration
 source $ZSH/oh-my-zsh.sh
+source ~/.private
+
+#GO
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
 
 # Aliases
-
 alias python="/Library/Frameworks/Python.framework/Versions/3.6/bin/python3"
 alias pip="python -m pip"
 
