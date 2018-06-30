@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Tmux Color
+alias tmux='TERMINFO=/usr/share/terminfo/x/xterm-16color TERM=xterm-16color tmux -2'
+
+#Shortcuts
+alias dl="cd ~/Downloads"
+alias h="history"
+alias dgo='cd ~/go/src/github.com/salihciftci'
+
+# IP address
+alias pubip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="/sbin/ifconfig "en5" 2>/dev/null | grep 'inet ' | awk '{print $2}'"
+
+# copy file interactive
+alias cp='cp -i'
+
+# move file interactive
+alias mv='mv -i'
+
+# untar
+alias untar='tar xvf'
+
+# Lock the screen
+alias afk="pmset displaysleepnow"

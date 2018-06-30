@@ -1,0 +1,58 @@
+#!/bin/bash
+
+# My functions and aliases
+help() {
+	echo "cpdot	-> Backup dotfiles"
+	echo "mkd	-> Create a new directory and enter it"
+	echo "mktp	-> Make a temp dir and enter it"
+}
+
+# Make a temporary directory and enter it
+mktp() {
+	local dir
+	if [ $# -eq 0 ]; then
+		dir=$(mktemp -d)
+	else
+		dir=$(mktemp -d -t "${1}.XXXXXXXXXX")
+	fi
+	cd "$dir" || exit
+}
+
+# Create a new directory and enter it
+mkd() {
+	mkdir -p "$@"
+	cd "$@" || exit
+}
+
+# Get colors in manual pages
+man() {
+	env \
+		LESS_TERMCAP_mb="$(printf '\e[1;31m')" \
+		LESS_TERMCAP_md="$(printf '\e[1;31m')" \
+		LESS_TERMCAP_me="$(printf '\e[0m')" \
+		LESS_TERMCAP_se="$(printf '\e[0m')" \
+		LESS_TERMCAP_so="$(printf '\e[1;44;33m')" \
+		LESS_TERMCAP_ue="$(printf '\e[0m')" \
+		LESS_TERMCAP_us="$(printf '\e[1;32m')" \
+		man "$@"
+}
+
+# Install my dotfiles
+dotcp() {
+	cp ~/code/dotfiles/.vimrc $HOME/
+	cp ~/code/dotfiles/.tmux.conf $HOME/
+	cp ~/code/dotfiles/.zshrc $HOME/
+	cp ~/code/dotfiles/.functions $HOME/
+	cp ~/code/dotfiles/.aliases $HOME/
+	echo "[✓] Install dotfiles completed"
+}
+
+# Backup my dotfiles
+cpdot() {
+	cp $HOME/.vimrc ~/code/dotfiles/
+	cp $HOME/.tmux.conf ~/code/dotfiles/
+	cp $HOME/.zshrc ~/code/dotfiles/
+	cp $HOME/.functions ~/code/dotfiles/
+	cp $HOME/.aliases ~/code/dotfiles/
+	echo "[✓] Copy dotfiles completed!"
+}
