@@ -1,5 +1,8 @@
-# Path to your oh-my-zsh installation.
+# Exports
 export ZSH=/Users/salih/.oh-my-zsh
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+export GPG_TTY=$(tty)
 
 # Theme
 ZSH_THEME="xxf"
@@ -9,21 +12,14 @@ ZSH_THEME="xxf"
 # much, much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
+# User configuration
+source $ZSH/oh-my-zsh.sh
+source ~/.private
+source ~/.aliases
+source ~/.functions
+
 #Plugins
 plugins=(
   git
 )
 
-# User configuration
-source $ZSH/oh-my-zsh.sh
-source ~/.private
-
-#GO
-export GOPATH=$HOME/go
-export GOBIN=$GOPATH/bin
-
-# Aliases
-alias python="/Library/Frameworks/Python.framework/Versions/3.6/bin/python3"
-alias pip="python -m pip"
-
-alias tmux='TERMINFO=/usr/share/terminfo/x/xterm-16color TERM=xterm-16color tmux -2'
