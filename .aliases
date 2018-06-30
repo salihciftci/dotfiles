@@ -7,6 +7,8 @@ alias tmux='TERMINFO=/usr/share/terminfo/x/xterm-16color TERM=xterm-16color tmux
 alias dl="cd ~/Downloads"
 alias h="history"
 alias dgo='cd ~/go/src/github.com/salihciftci'
+alias g="git"
+
 
 # IP address
 alias pubip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -23,3 +25,7 @@ alias untar='tar xvf'
 
 # Lock the screen
 alias afk="pmset displaysleepnow"
+
+# Git
+# View the current working tree status using the short format
+alias gss="git status -s"
