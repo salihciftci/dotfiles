@@ -26,9 +26,12 @@ alias untar='tar xvf'
 # Lock the screen
 alias afk="pmset displaysleepnow"
 
-# directorys first!
+# Directorys first!
 alias l="/usr/local/bin/gls --color -h --group-directories-first -la"
 alias ls="/usr/local/bin/gls --color -h --group-directories-first"
+
+# I hate them
+alias rmds="find . -name '.DS_Store' -type f -delete"
 
 # Git
 # View the current working tree status using the short format
