@@ -7,7 +7,6 @@ alias tmux='TERMINFO=/usr/share/terminfo/x/xterm-16color TERM=xterm-16color tmux
 alias dl="cd ~/Downloads"
 alias h="history"
 alias dgo='cd ~/go/src/github.com/salihciftci'
-alias g="git"
 
 
 # IP address
@@ -35,4 +34,11 @@ alias rmds="find . -name '.DS_Store' -type f -delete"
 
 # Git
 # View the current working tree status using the short format
+alias g="git"
 alias gss="git status -s"
+alias gcm="git commit -m"
+alias gco="git checkout"
+alias gdi="git diff"
+alias glg="git log -p"
+alias gls="git ls-files"
+alias gpa="git pushall"
