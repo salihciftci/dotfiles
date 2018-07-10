@@ -1,12 +1,5 @@
 #!/bin/bash
 
-# My functions and aliases
-help() {
-	echo "cpdot	-> Backup dotfiles"
-	echo "mkd	-> Create a new directory and enter it"
-	echo "mktp	-> Make a temp dir and enter it"
-}
-
 # Make a temporary directory and enter it
 mktp() {
 	local dir
@@ -35,24 +28,4 @@ man() {
 		LESS_TERMCAP_ue="$(printf '\e[0m')" \
 		LESS_TERMCAP_us="$(printf '\e[1;32m')" \
 		man "$@"
-}
-
-# Install my dotfiles
-dotcp() {
-	cp ~/code/dotfiles/.vimrc $HOME/
-	cp ~/code/dotfiles/.tmux.conf $HOME/
-	cp ~/code/dotfiles/.zshrc $HOME/
-	cp ~/code/dotfiles/.functions $HOME/
-	cp ~/code/dotfiles/.aliases $HOME/
-	echo "[✓] Install dotfiles completed"
-}
-
-# Backup my dotfiles
-cpdot() {
-	cp $HOME/.vimrc ~/code/dotfiles/
-	cp $HOME/.tmux.conf ~/code/dotfiles/
-	cp $HOME/.zshrc ~/code/dotfiles/
-	cp $HOME/.functions ~/code/dotfiles/
-	cp $HOME/.aliases ~/code/dotfiles/
-	echo "[✓] Copy dotfiles completed!"
 }
