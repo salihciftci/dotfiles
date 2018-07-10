@@ -3,28 +3,18 @@
 " @salihciftci
 "-------------------------------------------------------------------------------
 
-set timeoutlen=1000 ttimeoutlen=0 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-fugitive'
-Plugin 'SirVer/ultisnips'
-Plugin 'git://git.wincent.com/command-t.git'
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-Plugin 'bling/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'hdima/python-syntax'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'elzr/vim-json'
-Plugin 'fatih/vim-go'
-Plugin 'fatih/molokai'
-Plugin 'AndrewRadev/splitjoin.vim'
+Plug 'tpope/vim-commentary'
+Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'scrooloose/nerdtree'
+Plug 'elzr/vim-json'
+Plug 'fatih/vim-go', { 'tag': '*' }
+Plug 'fatih/molokai'
+Plug 'AndrewRadev/splitjoin.vim'
 
-call vundle#end()          
-filetype plugin indent on  
+call plug#end()
 
 "-------------------------------------------------------------------------------
 " Settings
@@ -80,8 +70,8 @@ set background=dark
 set t_Co=256
 let g:rehash256 = 1
 let g:molokai_original = 1
-colorscheme molokai
 let g:airline_theme='minimalist'
+colorscheme molokai
 
 "-------------------------------------------------------------------------------
 " Key Mapping
@@ -117,11 +107,6 @@ noremap! <Down> <Esc>
 "-------------------------------------------------------------------------------
 " Plugin Settings
 "-------------------------------------------------------------------------------
-
-" UltiSnips
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " Vim-GO
 let g:go_addtags_transform = "camelcase"
