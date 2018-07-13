@@ -30,7 +30,6 @@ alias ls="/usr/local/bin/gls --color -h --group-directories-first"
 alias rmds="find . -name '.DS_Store' -type f -delete"
 
 # Git
-# View the current working tree status using the short format
 alias g="git"
 alias gss="git status -s"
 alias gcm="git commit -m"
@@ -39,3 +38,10 @@ alias gdi="git diff"
 alias glg="git log -p"
 alias gls="git ls-files"
 alias gpa="git pushall"
+
+# Docker
+alias dk="docker"
+alias dm="docker-machine"
+alias dki="docker image"
+alias dks="docker service"
+alias dkl="docker logs"
