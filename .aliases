@@ -2,29 +2,17 @@
 
 #Shortcuts
 alias dl="cd ~/Downloads"
-alias h="history"
-alias dgo='cd ~/go/src/github.com/salihciftci'
-
 
 # IP address
-alias pubip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias localip="/sbin/ifconfig "en5" 2>/dev/null | grep 'inet ' | awk '{print $2}'"
+alias pubip="curl ifconfig.co"
+alias localip="/sbin/ifconfig "eno2" 2>/dev/null | grep 'inet ' | awk '{print $2}'"
 
-# copy file interactive
+#Common Aliases
 alias cp='cp -i'
-
-# move file interactive
 alias mv='mv -i'
-
-# untar
 alias untar='tar xvf'
+alias h="history"
 
-# Lock the screen
-alias afk="pmset displaysleepnow"
-
-# Directorys first!
-alias l="/usr/local/bin/gls --color -h --group-directories-first -la"
-alias ls="/usr/local/bin/gls --color -h --group-directories-first"
 
 # I hate them
 alias rmds="find . -name '.DS_Store' -type f -delete"
@@ -40,8 +28,38 @@ alias gls="git ls-files"
 alias gpa="git pushall"
 
 # Docker
-alias dk="docker"
+alias d="docker"
 alias dm="docker-machine"
 alias dki="docker image"
 alias dks="docker service"
 alias dkl="docker logs"
+
+# Tmux
+alias ta="tmux attach -t"
+alias tad="tmux attach -d -t"
+alias ts="tmux new-session -s"
+alias tl="tmux list-sessions"
+alias tks="tmux kill-session -t"
+
+#GO
+alias gob='go build'
+alias goc='go clean'
+alias god='go doc'
+alias gof='go fmt'
+alias gofa='go fmt ./...'
+alias gog='go get'
+alias goi='go install'
+alias gol='go list'
+alias gopb='cd $GOPATH/bin'
+alias gops='cd $GOPATH/src'
+alias gor='go run'
+alias got='go test'
+alias gov='go vet'
+
+#NPM
+alias npmo="npm outdated"
+alias npmlg="npm list"
+alias npml="npm ls --depth=0"
+alias npms="npm start"
+alias npmt="npm test"
+alias npmr="npm run"
