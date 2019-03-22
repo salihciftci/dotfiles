@@ -1,5 +1,5 @@
 # Exports
-export ZSH=/home/salih/.oh-my-zsh
+export ZSH=/Users/salih/.oh-my-zsh
 export PATH=$PATH:/usr/local/go/bin
 export GPG_TTY=$(tty)
 
