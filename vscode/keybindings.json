@@ -1,0 +1,6 @@
+[
+    {
+        "key": "cmd+[IntlBackslash]",
+        "command": "workbench.action.terminal.focus"
+    }
+]
