@@ -4,16 +4,16 @@
 "-------------------------------------------------------------------------------
 
 call plug#begin('~/.vim/plugged')
-"Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
-"Plug 'elzr/vim-json'
+Plug 'elzr/vim-json'
 Plug 'fatih/vim-go', { 'tag': '*' }
 Plug 'fatih/molokai'
-"Plug 'AndrewRadev/splitjoin.vim'
-"Plug 'pangloss/vim-javascript'
-"Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 call plug#end()
 
 "-------------------------------------------------------------------------------
