@@ -14,6 +14,7 @@ Plug 'fatih/vim-go', { 'tag': '*' }
 Plug 'fatih/molokai'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 "-------------------------------------------------------------------------------
@@ -51,6 +52,7 @@ set pumheight=10                	" Completion window max size
 set nocursorcolumn              	" Do not highlight column (speeds up highlighting)
 set nocursorline                	" Do not highlight cursor (speeds up highlighting)
 set lazyredraw                  	" Wait to redraw
+set updatetime=100
 
 " This enables us to undo files even if you exit Vim.
 if has('persistent_undo')
