@@ -15,6 +15,9 @@ Plug 'fatih/molokai'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'airblade/vim-gitgutter'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 call plug#end()
 
 "-------------------------------------------------------------------------------
@@ -53,7 +56,7 @@ set nocursorcolumn              	" Do not highlight column (speeds up highlighti
 set nocursorline                	" Do not highlight cursor (speeds up highlighting)
 set lazyredraw                  	" Wait to redraw
 set updatetime=100
-
+set expandtab ts=4 sw=4 ai
 " This enables us to undo files even if you exit Vim.
 if has('persistent_undo')
   set undofile
@@ -119,3 +122,6 @@ let g:go_highlight_functions = 1
 let g:go_highlight_function_calls = 1
 let g:go_highlight_extra_types = 1
 let g:go_highlight_generate_tags = 1
+
+" Prettier
+let g:prettier#config#tab_width = 4
