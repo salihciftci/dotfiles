@@ -7,12 +7,18 @@ alias dl="cd ~/Downloads"
 alias pubip="curl ifconfig.co"
 alias localip="/sbin/ifconfig "en0" 2>/dev/null | grep 'inet ' | awk '{print $2}'"
 
+#Some Mac aliases
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+
 #Common Aliases
 alias cp='cp -i'
 alias mv='mv -i'
 alias untar='tar xvf'
 alias h="history"
 
+alias l="ls --color -h --group-directories-first -la"
+alias ls="ls --color -h --group-directories-first"
 
 # I hate them
 alias rmds="find . -name '.DS_Store' -type f -delete"
