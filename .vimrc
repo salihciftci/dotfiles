@@ -17,7 +17,7 @@ Plug 'mxw/vim-jsx'
 Plug 'airblade/vim-gitgutter'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html', 'tmpl'] }
 call plug#end()
 
 "-------------------------------------------------------------------------------
@@ -74,7 +74,6 @@ let g:rehash256 = 1
 let g:molokai_original = 1
 let g:airline_theme='minimalist'
 colorscheme molokai
-
 "-------------------------------------------------------------------------------
 " Key Mapping
 "-------------------------------------------------------------------------------
